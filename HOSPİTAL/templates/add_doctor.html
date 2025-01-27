@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Yeni Doktor Ekle</h2>
+
+<form action="{{ url_for('add_doctor') }}" method="POST">
+    <label for="name">İsim:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="specialty">Uzmanlık:</label><br>
+    <input type="text" id="specialty" name="specialty" required><br><br>
+
+    <button type="submit">Kaydet</button>
+</form>
+{% endblock %}

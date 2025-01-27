@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+          <h2>Hastane Yönetim Sistemi</h2>
+<p>Hoş geldiniz! Bu sayfada hasta ve doktor kayıtlarını yönetebilirsiniz.</p>
+<button onclick="window.location.href='{{ url_for('list_patients') }}'">
+    Hastaları Gör
+</button>
+<button onclick="window.location.href='{{ url_for('list_doctors') }}'">
+    Doktorları Gör
+</button>
+{% endblock %}

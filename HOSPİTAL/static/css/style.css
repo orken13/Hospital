@@ -1,0 +1,68 @@
+/*
+   style.css
+   Bu dosyada uygulamaya basit CSS özellikleri ekliyoruz.
+   Arka plan resmi, basit buton stili vb. tanımlamalar var.
+*/
+
+/* Body genel ayarları */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+
+    /* Arka plan resmi için */
+    background: url('../images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    /* cover: resmi otomatik kırpmadan tam ekrana yayar */
+}
+
+/* Ana container'ı ortalamak ve arka plan üstüne okunaklı bir kısım ayarlamak için */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: rgba(255, 255, 255, 0.8); /* yarı saydam beyaz arka plan */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Navigation menü linkleri */
+nav a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Tablo stil ayarları */
+table, th, td {
+    border: 1px solid #999;
+    border-collapse: collapse;
+    padding: 8px;
+}
+
+/* Form etiketleri ve input alanları */
+form label {
+    font-weight: bold;
+}
+
+form input {
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+/* Buton stilleri */
+button, input[type="submit"] {
+    background-color: #4CAF50; /* yeşil ton */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Buton üzerine gelince biraz renk değişimi */
+button:hover, input[type="submit"]:hover {
+    background-color: #45a049;
+}

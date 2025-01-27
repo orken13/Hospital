@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Yeni Hasta Ekle</h2>
+
+<form action="{{ url_for('add_patient') }}" method="POST">
+    <label for="name">İsim:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="age">Yaş:</label><br>
+    <input type="number" id="age" name="age" required><br><br>
+
+    <label for="complaint">Şikayet:</label><br>
+    <input type="text" id="complaint" name="complaint" required><br><br>
+
+    <button type="submit">Kaydet</button>
+</form>
+{% endblock %}

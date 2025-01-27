@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Doktorlar Listesi</h2>
+
+<p>
+    <button onclick="window.location.href='{{ url_for('add_doctor') }}'">
+        Yeni Doktor Ekle
+    </button>
+</p>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>İsim</th>
+        <th>Uzmanlık</th>
+    </tr>
+    {% for doctor in doctors %}
+    <tr>
+        <td>{{ doctor.id }}</td>
+        <td>{{ doctor.name }}</td>
+        <td>{{ doctor.specialty }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

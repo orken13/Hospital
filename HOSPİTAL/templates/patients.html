@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Hastalar Listesi</h2>
+
+<p>
+    <button onclick="window.location.href='{{ url_for('add_patient') }}'">
+        Yeni Hasta Ekle
+    </button>
+</p>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>İsim</th>
+        <th>Yaş</th>
+        <th>Şikayet</th>
+        <th>Sil</th>
+    </tr>
+    {% for patient in patients %}
+    <tr>
+        <td>{{ patient.id }}</td>
+        <td>{{ patient.name }}</td>
+        <td>{{ patient.age }}</td>
+        <td>{{ patient.complaint }}</td>
+        <td>
+            <form action="{{ url_for('delete_patient', patient_id=patient.id) }}" method="POST" style="display:inline;">
+                <button type="submit">Sil</button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

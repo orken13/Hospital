@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Hastane Yönetim Sistemi</title>
+    <!-- Static klasöründen CSS dosyamızı çağırıyoruz (örnek) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<nav class="container">
+    <!-- Basit gezinme bağlantıları -->
+    <a href="{{ url_for('home') }}">Ana Sayfa</a>
+    <a href="{{ url_for('list_patients') }}">Hastalar</a>
+    <a href="{{ url_for('list_doctors') }}">Doktorlar</a>
+</nav>
+
+<div class="container">
+    <!-- İçerik bloğu -->
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>
